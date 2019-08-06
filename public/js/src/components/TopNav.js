@@ -1,7 +1,7 @@
 function TopNav(props) {
     let messages = [];
-    messages = props.messages.map(message=>{
-        return <MessagePreview messageName={message.name} messageDate={message.date} messageMessage={message.message}/>
+    messages = props.messages.map((message, i)=>{
+        return <MessagePreview key={i} messageName={message.name} messageDate={message.date} messageMessage={message.message}/>
     })
     return(
         <ul className="nav navbar-right top-nav">
