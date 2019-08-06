@@ -1,4 +1,8 @@
 function TransactionPanel(props) {
+    let orders = [];
+    orders = props.orders.map(order=>{
+        return <TransactionRow orderId={order.id} orderDate={order.orderDate} orderTime={order.orderTime} orderAmount={order.amount} />
+    })
     return (
         <div className="panel panel-default">
             <div className="panel-heading">
@@ -16,7 +20,7 @@ function TransactionPanel(props) {
                             </tr>
                         </thead>
                         <tbody>
-                            <TransactionRow/>
+                            {orders}
                         </tbody>
                     </table>
                 </div>

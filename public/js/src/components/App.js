@@ -1,11 +1,9 @@
-// import { prependOnceListener } from "cluster";
-
-function App(){
+function App(props){
     return(
         <div> 
             <div id="wrapper">
                 <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                    <TopNav />
+                    <TopNav messages={props.messages}/>
                     <SideNav/>
                 </nav>
                 <div id="page-wrapper">
@@ -23,19 +21,19 @@ function App(){
                             </div>
                         </div>
                         <div className="row">
-                            <Comments/>
-                            <Tasks/>
-                            <Orders/>
-                            <Tickets/>
+                            <Comments newComments={props.newComments}/>
+                            <Tasks newTasks={props.newTasks}/>
+                            <Orders newOrders={props.newOrders}/>
+                            <Tickets tickets={props.tickets}/>
                         </div>
                         <AreaChart/>
                         <div className="row">
                             <DonutChart/>
                             <div className="col-lg-4">
-                                <TaskPanel/>
+                                <TaskPanel tasks={props.tasks}/>
                             </div>
                             <div className="col-lg-4">
-                                <TransactionPanel/>
+                                <TransactionPanel orders={props.orders}/>
                             </div>
                         </div>
                     </div>

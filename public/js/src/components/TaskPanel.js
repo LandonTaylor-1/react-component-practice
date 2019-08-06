@@ -1,4 +1,8 @@
 function TaskPanel(props) {
+    let tasks = [];
+    tasks = props.tasks.map(task=>{
+        return <TaskItem taskName={task.task} date={task.date} />
+    })
     return (
         <div className="panel panel-default">
             <div className="panel-heading">
@@ -6,7 +10,7 @@ function TaskPanel(props) {
             </div>
             <div className="panel-body">
                 <div className="list-group">
-                    <TaskItem />
+                    {tasks}
                 </div>
                 <div className="text-right">
                     <a href="#">View All Activity <i className="fa fa-arrow-circle-right"></i></a>
