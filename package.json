@@ -1,0 +1,24 @@
+{
+  "name": "react-component-practice",
+  "version": "1.0.0",
+  "description": "The purpose of this project is to practice coding React components. We will use our knowledge of creating functional components where each component is coded in its own file. We are also going to experience what might really happen on the job. You may be tasked with working an existing website in which all the html is crammed into one file. Your job is to implement React and decide how you can organize the existing html into components. In this project you are told what the components should be but in real life you would have to decide this for yourself.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LandonTaylor-1/react-component-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LandonTaylor-1/react-component-practice/issues"
+  },
+  "homepage": "https://github.com/LandonTaylor-1/react-component-practice#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http-server": "^0.11.1"
+  }
+}
